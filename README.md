@@ -7,15 +7,15 @@ Cette documentation explique comment enregistrer, configurer et développer votr
 
 Pour que votre application puisse accéder à nos API, vous devez enregistrer votre application à l'aide du Dashboard de l'application. L'inscription crée un ID d'application qui nous permet de savoir qui vous êtes, nous aide à distinguer votre application des autres applications..
 
-    Vous devrez créer une nouvelle application 
+   Vous devrez créer une nouvelle application 
 
-    Une fois que vous avez créé votre application, vous obtiendrez votre app_id et app_secret
+   Une fois que vous avez créé votre application, vous obtiendrez votre app_id et app_secret
 
 2. Log in With
 
 Se connecter avec le système est un moyen rapide et pratique pour les utilisateurs de créer des comptes et de se connecter à votre application. Notre système de connexion avec permet deux scénarios, l'authentification et la demande d'autorisations pour accéder aux données des personnes. Vous pouvez utiliser le système Connexion avec simplement pour l'authentification ou pour l'authentification et l'accès aux données.
 
-    1. Pour démarrer le processus de connexion OAuth, vous devez utiliser un lien pour votre application comme celui-ci:
+   1. Pour démarrer le processus de connexion OAuth, vous devez utiliser un lien pour votre application comme celui-ci:
 ```
     <a href="https://bluepix.fr/api/oauth?app_id=YOUR_APP_ID">Log in With BluePix</a>
 ```
@@ -26,13 +26,13 @@ Se connecter avec le système est un moyen rapide et pratique pour les utilisate
    ![alt text](https://bluepix.fr/content/themes/bluepix3.6/images/screenshots/login_with.png)
     
     
-    2. Une fois que l'utilisateur a accepté votre application, l'utilisateur sera redirigé vers l'URL de redirection de votre application avec auth_key comme ça:
+   2. Une fois que l'utilisateur a accepté votre application, l'utilisateur sera redirigé vers l'URL de redirection de votre application avec auth_key comme ça:
     
 ```
     https://mydomain.com/my_redirect_url.php?auth_key=AUTH_KEY
 ```
 
-    Ce auth_key valable uniquement pour une utilisation unique, donc une fois que vous l'avez utilisé, vous ne pourrez plus l'utiliser et générer un nouveau code, vous devrez rediriger l'utilisateur vers la connexion avec le lien à nouveau.
+   Ce auth_key valable uniquement pour une utilisation unique, donc une fois que vous l'avez utilisé, vous ne pourrez plus l'utiliser et générer un nouveau code, vous devrez rediriger l'utilisateur vers la connexion avec le lien à nouveau.
 
 3. Access Token
 
@@ -53,7 +53,7 @@ Une fois que vous avez obtenu l'approbation de l'utilisateur de votre applicatio
     }
     ?>
 ```
-    Ce access_token valide uniquement pour une heure 1, donc une fois qu'il est devenu invalide, vous devrez en générer un nouveau en redirigeant l'utilisateur vers la connexion avec le lien à nouveau.
+   Ce access_token valide uniquement pour une heure 1, donc une fois qu'il est devenu invalide, vous devrez en générer un nouveau en redirigeant l'utilisateur vers la connexion avec le lien à nouveau.
 
 4. APIs
 
