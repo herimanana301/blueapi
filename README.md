@@ -13,7 +13,7 @@ Pour que votre application puisse accéder à nos API, vous devez enregistrer vo
 
 2. Log in With
 
-Se connecter avec le système est un moyen rapide et pratique pour les utilisateurs de créer des comptes et de se connecter à votre application. Notre système de connexion avec permet deux scénarios, l'authentification et la demande d'autorisations pour accéder aux données des personnes. Vous pouvez utiliser le système Connexion avec simplement pour l'authentification ou pour l'authentification et l'accès aux données.
+Se connecter avec le système est un moyen rapide et pratique pour les utilisateurs de créer des comptes et de se connecter à votre application. Notre système de connexion permet deux scénarios, l'authentification et la demande d'autorisations pour accéder aux données des utilisateurs. Vous pouvez utiliser le système Connexion simplement pour l'authentification ou pour l'authentification et l'accès aux données.
 
    1. Pour démarrer le processus de connexion OAuth, vous devez utiliser un lien pour votre application comme celui-ci:
 ```
@@ -53,7 +53,7 @@ Une fois que vous avez obtenu l'approbation de l'utilisateur de votre applicatio
     }
     ?>
 ```
-   Ce access_token valide uniquement pour une heure 1, donc une fois qu'il est devenu invalide, vous devrez en générer un nouveau en redirigeant l'utilisateur vers la connexion avec le lien à nouveau.
+   Ce access_token valide uniquement pour une 1 heure , donc une fois qu'il est devenu invalide, vous devrez en générer un nouveau en redirigeant l'utilisateur vers la connexion avec le lien à nouveau.
 
 4. APIs
 
@@ -86,7 +86,6 @@ Le résultat sera:
         "user_cover": "",
         "user_registered": "",
         "user_verified": "",
-        "user_relationship": "",
         "user_biography": "",
         "user_website": ""
     }
