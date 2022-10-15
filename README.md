@@ -20,12 +20,14 @@ Se connecter avec le système est un moyen rapide et pratique pour les utilisate
     <a href="https://bluepix.fr/api/oauth?app_id=YOUR_APP_ID">Log in With BluePix</a>
 ```
 
-    L'utilisateur sera redirigé vers la page Se connecter avec comme celle-ci
+   
+   L'utilisateur sera redirigé vers la page Se connecter avec comme celle-ci
     
-    ![alt text](https://bluepix.fr/content/themes/bluepix3.6/images/screenshots/login_with.png)
+   ![alt text](https://bluepix.fr/content/themes/bluepix3.6/images/screenshots/login_with.png)
     
     
     2. Une fois que l'utilisateur a accepté votre application, l'utilisateur sera redirigé vers l'URL de redirection de votre application avec auth_key comme ça:
+    
 ```
     https://mydomain.com/my_redirect_url.php?auth_key=AUTH_KEY
 ```
