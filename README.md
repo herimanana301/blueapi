@@ -38,7 +38,7 @@ Se connecter avec le système est un moyen rapide et pratique pour les utilisate
 
 Une fois que vous avez obtenu l'approbation de l'utilisateur de votre application Connectez-vous avec la fenêtre et que vous êtes revenu avec le auth_key ce qui signifie que vous êtes maintenant prêt à récupérer les données de nos API et pour démarrer ce processus, vous devrez autoriser votre application et obtenir le access_token et vous pouvez suivre nos étapes pour savoir comment l'obtenir.
 
-    1. Pour obtenir un jeton d'accès, envoyez une requête HTTP GET au point de terminaison suivant comme celui-ci:
+   1. Pour obtenir un jeton d'accès, envoyez une requête HTTP GET au point de terminaison suivant comme celui-ci:
 ```
     <?php
     $app_id = "YOUR_APP_ID"; // your app id
