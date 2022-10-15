@@ -53,7 +53,7 @@ Une fois que vous avez obtenu l'approbation de l'utilisateur de votre applicatio
     }
     ?>
 ```
-   Ce access_token valide uniquement pour une 1 heure , donc une fois qu'il est devenu invalide, vous devrez en générer un nouveau en redirigeant l'utilisateur vers la connexion avec le lien à nouveau.
+   Ce access_token valide uniquement pour 1 heure , donc une fois qu'il est devenu invalide, vous devrez en générer un nouveau en redirigeant l'utilisateur vers la connexion avec le lien à nouveau.
 
 4. APIs
 
