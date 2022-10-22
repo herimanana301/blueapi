@@ -1,44 +1,42 @@
 API Version 1.1
 
-Cette documentation explique comment enregistrer, configurer et développer votre application afin que vous puissiez utiliser nos API avec succès.
+This documentation explain how to register, configure, and develop your app so you can successfully use our APIs 
 
+Create App
 
-1. Créer une application
+In order for your app to access our APIs, you must register your app using the App Dashboard. Registration creates an App ID that lets us know who you are, helps us distinguish your app from other apps. 
 
-Pour que votre application puisse accéder à nos API, vous devez enregistrer votre application à l'aide du Dashboard de l'application. L'inscription crée un ID d'application qui nous permet de savoir qui vous êtes, nous aide à distinguer votre application des autres applications..
+   You will need to create a new App 
 
-   Vous devrez créer une nouvelle application 
-
-   Une fois que vous avez créé votre application, vous obtiendrez votre app_id et app_secret
+   Once you created your App you will get your app_id and app_secret
 
 2. Log in With
 
-Se connecter avec le système est un moyen rapide et pratique pour les utilisateurs de créer des comptes et de se connecter à votre application. Notre système de connexion permet deux scénarios, l'authentification et la demande d'autorisations pour accéder aux données des utilisateurs. Vous pouvez utiliser le système Connexion simplement pour l'authentification ou pour l'authentification et l'accès aux données.
+Log in With system is a fast and convenient way for people to create accounts and log into your app. Our Log in With system enables two scenarios, authentication and asking for permissions to access people's data. You can use Login With system simply for authentication or for both authentication and data access. 
 
-   1. Pour démarrer le processus de connexion OAuth, vous devez utiliser un lien pour votre application comme celui-ci:
+   1. Starting the OAuth login process, You need to use a link for your app like this: 
 ```
     <a href="https://bluepix.fr/api/oauth?app_id=YOUR_APP_ID">Log in With BluePix</a>
 ```
 
    
-   L'utilisateur sera redirigé vers la page Se connecter avec comme celle-ci
+   The user will be redirect to Log in With page like this
     
    ![alt text](https://bluepix.fr/content/themes/bluepix3.6/images/screenshots/login_with.png)
     
     
-   2. Une fois que l'utilisateur a accepté votre application, l'utilisateur sera redirigé vers l'URL de redirection de votre application avec auth_key comme ça:
+   2. Once the user accpeted your app, the user will be redirected to your App Redirect URL with auth_key like this: 
     
 ```
     https://mydomain.com/my_redirect_url.php?auth_key=AUTH_KEY
 ```
 
-   Ce auth_key valable uniquement pour une utilisation unique, donc une fois que vous l'avez utilisé, vous ne pourrez plus l'utiliser et générer un nouveau code, vous devrez rediriger l'utilisateur vers la connexion avec le lien à nouveau.
+   This auth_key valid only for one time usage, so once you used it you will not be able to use it again and generate new code you will need to redirect the user to the log in with link again. 
 
 3. Access Token
+Once you get the user approval of your app Log in With window and returned with the auth_key which means that now you are ready to retrive data from our APIs and to start this process you will need to authorize your app and get the access_token and you can follow our steps to learn how to get it. 
 
-Une fois que vous avez obtenu l'approbation de l'utilisateur de votre application Connectez-vous avec la fenêtre et que vous êtes revenu avec le auth_key ce qui signifie que vous êtes maintenant prêt à récupérer les données de nos API et pour démarrer ce processus, vous devrez autoriser votre application et obtenir le access_token et vous pouvez suivre nos étapes pour savoir comment l'obtenir.
-
-   1. Pour obtenir un jeton d'accès, envoyez une requête HTTP GET au point de terminaison suivant comme celui-ci:
+   1. To get an access token, make an HTTP GET request to the following endpoint like this: 
 ```
     <?php
     $app_id = "YOUR_APP_ID"; // your app id
@@ -53,25 +51,25 @@ Une fois que vous avez obtenu l'approbation de l'utilisateur de votre applicatio
     }
     ?>
 ```
-   Ce access_token valide uniquement pour 1 heure , donc une fois qu'il est devenu invalide, vous devrez en générer un nouveau en redirigeant l'utilisateur vers la connexion avec le lien à nouveau.
+   This access_token valid only for only one 1 hour, so once it got invalid you will need to genarte new one by redirect the user to the log in with link again. 
 
 4. APIs
 
-Une fois que vous obtenez votre access_token Vous pouvez maintenant récupérer des informations de notre système via des requêtes HTTP GET qui prennent en charge les paramètres suivants
+Once you get your access_token Now you can retrieve informations from our system via HTTP GET requests which supports the following parameters 
 
 Endpoint 	                     Description
 api/get_user_info 	           get user info
 
 
 
-Vous pouvez récupérer les informations utilisateur comme celle-ci
+You can retrive user info like this 
 ```
 if(!empty($json['access_token'])) {
    $access_token = $json['access_token']; // your access token
    $get = file_get_contents("https://bluepix.fr/api/get_user_info?access_token=$access_token");
 }
 ```
-Le résultat sera:
+The result will be:
 ```
 {
     "user_info": {
